@@ -28,7 +28,6 @@
 " }
 
 " General {
-    set autochdir " always switch to the current file directory
     set backspace=indent,eol,start " make backspace a more flexible
     set backup " make backup files
     set backupdir=~/.vim/backup " where to put backup files
@@ -139,28 +138,4 @@
     " space / shift-space scroll in normal mode
     noremap <S-space> <C-b>
     noremap <space> <C-f>
-" }
-
-
-" GUI Settings {
-if has("gui_running")
-    " Basics {
-        set columns=180 " perfect size for me
-        set guifont=Consolas:h10 " My favorite font
-        set guioptions=ce 
-        "              ||
-        "              |+-- use simple dialogs rather than pop-ups
-        "              +  use GUI tabs, not console style tabs
-        set lines=55 " perfect size for me
-        set mousehide " hide the mouse cursor when typing
-    " }
-
-    " Font Switching Binds {
-        map <F8> <ESC>:set guifont=Consolas:h8<CR>
-        map <F9> <ESC>:set guifont=Consolas:h10<CR>
-        map <F10> <ESC>:set guifont=Consolas:h12<CR>
-        map <F11> <ESC>:set guifont=Consolas:h16<CR>
-        map <F12> <ESC>:set guifont=Consolas:h20<CR>
-    " }
-endif
 " }
