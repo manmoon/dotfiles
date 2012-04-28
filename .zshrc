@@ -11,6 +11,7 @@ export PROMPT="%{$ORANGE%}%n@%m %{$BLUE%}%~ %{$ORANGE%}%#%{$RESET%} "
 
 export EDITOR='vi'
 
+
 setopt HISTIGNOREALLDUPS # Don't keep duplicate commands in the history
 setopt SHAREHISTORY      # Share history between sessions
 setopt AUTO_CD           # Interpret plain directory name as a CD command
@@ -88,3 +89,6 @@ alias lh='ls -la \.*'
 function lr {
     ls -lt $@ | head
 }
+
+# Initialize system-dependent environment variables and aliases
+if [ -e ~/.envfile ]; then . ~/.envfile; fi
