@@ -45,7 +45,7 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 lr() { ls -lt $@ | head }
 lmf() { ls -t1 $@ | head -1 }
-up() { path=""; for i in {1..$1}; do path="../$path"; done; cd $path }
+up() { targetPath=""; for i in {1..$1}; do targetPath="../$targetPath"; done; cd $targetPath }
 alias tmux='tmux -2'
 
 # Initialize system-dependent environment variables and aliases
